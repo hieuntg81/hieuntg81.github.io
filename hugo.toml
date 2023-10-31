@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'k0walski - share'
 
 [module]
 # uncomment line below for temporary local development of module
