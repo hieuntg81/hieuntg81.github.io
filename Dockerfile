@@ -19,4 +19,4 @@ FROM hugomods/hugo:nginx
 COPY --from=builder /src/public /site
 
 # docker build -t hieunguyen/hugo:v1 --build-arg HUGO_BASEURL=http://localhost:8080 .
-# docker run -d -it -p 8080:80 hieunguyen/hugo:v1 hugo-server
+# docker run -d -it -p 8080:80 --name hugo-server hieunguyen/hugo:v1
