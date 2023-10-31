@@ -17,3 +17,6 @@ RUN hugo --minify --gc --enableGitInfo
 FROM hugomods/hugo:nginx
 # Copy the generated files to keep the image as small as possible.
 COPY --from=builder /src/public /site
+
+# docker build -t hieunguyen/hugo:v1 --build-arg HUGO_BASEURL=http://localhost:8080 .
+# docker run -d -it -p 8080:80 hieunguyen/hugo:v1 hugo-server
