@@ -1,7 +1,7 @@
 #####################################################################
 #                            Build Stage                            #
 #####################################################################
-FROM hugomods/hugo:exts as builder
+FROM hugomods/hugo:exts-0.120.2 as builder
 # Base URL
 ARG HUGO_BASEURL=http://localhost:8080
 ENV HUGO_BASEURL=${HUGO_BASEURL}
@@ -18,5 +18,5 @@ FROM hugomods/hugo:nginx
 # Copy the generated files to keep the image as small as possible.
 COPY --from=builder /src/public /site
 
-# docker build -t hieunguyen/hugo:v1 --build-arg HUGO_BASEURL=http://localhost:8080 .
-# docker run -d -it -p 8080:80 --name hugo-server hieunguyen/hugo:v1
+# docker build -t hieuntg81/hugo:v2 --build-arg HUGO_BASEURL=https://hieunguyen.io .
+# docker run -d -it -p 8080:80 --name hugo-server hieuntg81/hugo:v2

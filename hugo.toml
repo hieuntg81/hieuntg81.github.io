@@ -1,6 +1,6 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'k0walski - share'
+title = 'Hiếu "k0walski" Nguyễn - Blog'
 
 [module]
 # uncomment line below for temporary local development of module
